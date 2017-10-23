@@ -1,0 +1,22 @@
+{
+  "name": "sonicwall",
+  "version": "1.0.0",
+  "description": "SonicWall interview homework assignment: loads JSON table and creates simple data visualizations for user",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "body-parser": "*",
+    "bootstrap": "4.0.0-beta.2",
+    "popper.js": "*",
+    "express": "*",
+    "jquery": "*",
+    "dataframe-js": "*",
+    "angular-chart.js": "*"
+  }
+}
