@@ -18,5 +18,9 @@
     "jquery": "*",
     "dataframe-js": "*",
     "angular-chart.js": "*"
+  },
+  "scripts":{
+    "start":"node app"
   }
+  
 }
