@@ -53,6 +53,9 @@ app.controller('MainController', ['$scope', '$location', 'Data', function ($scop
     })
   });
   
+  $scope.currentPage = $location.search().page
+  
+  
   
   Data.getChart().then(function(res){
     console.log(res.data.chart)
@@ -62,6 +65,8 @@ app.controller('MainController', ['$scope', '$location', 'Data', function ($scop
   
     $scope.deptlabels = res.data.departments.labelArray
     $scope.deptdata = (res.data.departments.dataArray)
+    $scope.deptcolors = [ "#e7622f", "#1c2afa", "#999999", "#ff0000", "#5238ff", "#727272",
+                          "#ff3700", "#0087ff", "#424242", "#ff569a", "#5e56ff", "#8e8bc4"]  
   })
   
   

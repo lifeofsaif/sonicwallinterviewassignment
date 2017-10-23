@@ -1,15 +1,22 @@
 <div id="chartTab" class="row">
-  <div class="col-8">
+  <div class="col-6">
     <canvas height="5%" width="5%" id="genderpie" class="chart chart-doughnut" chart-data="genderdata" chart-labels="genderlabels" chart-colors="gendercolors" chart-dataset-override="override"> </canvas>
   </div>
-  <div class="col-4">
+  <div class="col-6">
     <h5>Gender Distribution</h5>
     <ul>
-      <li ng-repeat="gender in genderlabels track by $index"><div class="foo" style="background-color:{{gendercolors[$index]}}"></div>{{gender}}</li>
+      <li ng-repeat="gender in genderlabels track by $index"><div class="foo" style="background-color:{{gendercolors[$index]}}"></div>       <span style="color:{{gendercolors[$index]}}">{{(genderdata[$index])/10+"%"}}</span>     {{gender}} </li>
     </ul>
   </div>
-  <div class="col-4" ><h5 class="text-right">Department Distribution </h5></div>
+  <div class="col-4" >
+    <h6 >Department Distribution </h6>
+    <ul >
+      <li ng-repeat="department in deptlabels track by $index">
+        <div class="foo" style="background-color:{{deptcolors[$index]}}"></div><small><span style="color:{{deptcolors[$index]}}">{{(deptdata[$index])/10+"%"}}</span> {{department}}</small>
+      </li>
+    </ul>
+  </div>
   <div class="col-8">
-    <canvas height="25" width="25" id="deptpie" class="chart chart-doughnut" chart-data="deptdata" chart-labels="deptlabels"> </canvas>
+    <canvas height="25" width="25" id="deptpie" class="chart chart-doughnut" chart-data="deptdata" chart-labels="deptlabels" chart-colors="deptcolors" chart-dataset-override="override"> </canvas>
   </div>
 </div>

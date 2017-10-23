@@ -8,6 +8,10 @@
   margin-top: 100px;
 }
 
+#chartTab h6{
+  margin-top: 40px;
+}
+
 #chartTab ul{
   list-style: none;
 }
