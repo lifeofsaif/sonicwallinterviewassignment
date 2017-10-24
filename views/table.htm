@@ -1,34 +1,51 @@
 <div id="tableTab">
-  <ul class="container list-group pagination-sm">
-    <div ng-repeat="employee in paginated track by $index">
-      <a class="list-group-item list-group-item-action flex-column align-items-start ">
-        <div class="row ">
-          <div class="col"> 
-            <h5 class="mb-1"> 
-              <img ng-if="employee.gender=='Male'" src="../img/png/001-man.png" aria-labelledby="Gender:Male" alt="Gender:Male"> 
-              <img ng-if="employee.gender=='Female'" src="../img/png/002-venus.png" aria-labelledby="Gender:Female" alt="Gender:Female">
-              {{employee.first_name}} {{employee.last_name}}  
-              
-            </h5>
-            <p class="mb-1"><img src="../img/png/005-mortarboard.png"><small> {{employee.alma_mater}}</small></p>
-            <p class="mb-1"><img src="../img/png/006-mail.png"> <small>{{employee.email}}</small></p>
-          </div>
-          <div class="col tableRightColumn">
-            
-            
-            
-            <p class="mb-1 text-right"><small>id: {{employee.id}}</small></p>
-            <p class="mb-1 text-right"><small>{{employee.department}} Dept.</small> <img src="../img/png/004-briefcase.png"></p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <nav class="tableNav" aria-label="Page navigation example">
-      <ul class="pagination">
-        <div ng-repeat="page in pages" pageButtonDirective>
-          <li class="page-item"> <a class="page-link" id="page-link-{{page}}" href="#!/tables?page={{page}}" ng-click=setPage(page)>{{page}}</a> </li>
-        </div>
-      </ul>
-    </nav>
-  </ul>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><small>#</small></th>
+          <th><small>First Name</small></th>
+          <th><small>Last Name</small></th>
+          <th><small><img src="../img/svg/006-mail.svg" height="16px"> Email</small></th>
+          <th><small>Gender</small></th>
+          <th><small><img src="../img/svg/004-briefcase.svg" height="16px"> Department</small></th>
+          <th><small><img src="../img/svg/005-mortarboard.svg" height="16px"> Alma Aater</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='employee in data' class="small">
+          <td>#{{employee.id}}</td>
+          <td>{{employee.first_name}}</td>
+          <td>{{employee.last_name}}</td>
+          <td>{{employee.email}}</td>
+          <td>
+            <img ng-if="employee.gender=='Male'" src="../img/svg/001-man.svg" height="16px">
+            <img ng-if="employee.gender=='Female'" src="../img/svg/002-venus.svg"  height="16px">
+          </td>
+          
+          <td>{{employee.department}}</td>
+          <td>{{truncate(employee.alma_mater)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination small">
+      
+      
+      <li class="page-item">
+        <a ng-if="pageNumber==1" ng-click="prevPage()" class="page-link" href="/#!/employees?page=1">Previous</a>
+        <a ng-if="pageNumber!=1" ng-click="prevPage()" class="page-link" href="/#!/employees?page={{pageNumber}}">Previous</a>
+        
+      </li>
+      <li class="page-item">
+        <a ng-if="pageNumber==50" ng-click="nextPage()" class="page-link" href="/#!/employees?page=50">Next</a>
+        <a ng-if="pageNumber!=50" ng-click="nextPage()" class="page-link" href="/#!/employees?page={{pageNumber}}">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
 </div>

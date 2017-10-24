@@ -1,3 +1,14 @@
+
+#tableTab tr{
+  color: darkgray;
+}
+
+#tableTab tr:hover{ 
+  background-color: #2d2a28;
+}
+
+/* analytics style */ 
+
 #chartTab{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -23,45 +34,6 @@
   height: 10px;
   margin: 5px;
   border: 1px solid #a3a3a3;
-}
-
-.blue {
-  background: #13b4ff;
-}
-
-#tableRightColumn{
-  text-align: right !important;
-}
-
-.tableNav{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-a.page-link{
-  border-style: none;
-  background: none; 
-  color: #ff7a41;
-}
-
-#tableTab p{
-  color: #afafaf;
-}
-
-#tableTab h5{
-  color: #666666;
-  font-family: "Courier";
-  
-}
-
-
-
-
-a.page-link:focus,
-a.page-link:hover
-{
-    color: white;
-    background-color: #ff7a41;
 }
 
 /* Button colors */
@@ -159,17 +131,17 @@ body {
 
 /* Customize container */
 
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
-  }
-}
+
+
+
+
+@media (min-width: 1921px ).container {
+          width: 1920px;
+    }
 
 .container-narrow > hr {
   margin: 2rem 0;
 }
-
-
 
 
 

@@ -11,33 +11,7 @@ app.use(bodyParser.json());
 app.listen(port, function () {
   console.log('Our app is running on http://localhost:' + port);
 });
-app.get('/data', function (req, res) {
-  var pageNumber
-  if (req.query.page) pageNumber = req.query.page
-  else pageNumber = 1
-  fs.readFile('json/employees.json', 'utf8', function (err, data) {
-    data = JSON.parse(data)
-    var pageStart = (pageNumber - 1) * 10
-    data = data.slice(pageStart, pageStart + CHUNK)
-    data = getArrrayWithTruncatedUniversityNames(data)
-    res.json({
-      //employees: data
-      employees: data
-    })
-  })
 
-  function getArrrayWithTruncatedUniversityNames(data) {
-    data.forEach(function (employee) {
-      employee.alma_mater = truncate(employee.alma_mater)
-    })
-    return data
-  }
-
-  function truncate(university) {
-    if (university.length > 25) return university.slice(0, 25) + "..."
-    else return university
-  }
-})
 app.get('/chart', function (req, res) {
     fs.readFile('json/employees.json', 'utf8', function (err, data) {
       data = JSON.parse(data)

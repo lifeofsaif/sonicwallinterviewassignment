@@ -3,9 +3,9 @@ app = angular.module('MainApp', ["ngRoute", "chart.js"])
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
         templateUrl : "views/table.htm"
-    }).when("/tables", {
+    }).when("/employees", {
         templateUrl : "views/table.htm"
-    }).when("/charts", {
+    }).when("/analytics", {
         templateUrl : "views/chart.htm"
     })
 });
