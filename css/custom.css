@@ -7,6 +7,17 @@
   background-color: #2d2a28;
 }
 
+a.page-link{
+  color: darkgray;
+  border-color: darkgray;
+  background: none;
+}
+
+a.page-link:hover{
+  background-color: #2d2a28;
+  color: white;
+} 
+
 /* analytics style */ 
 
 #chartTab{
