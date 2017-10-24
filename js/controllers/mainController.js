@@ -25,9 +25,47 @@ app.controller('MainController', ['$scope', '$location', '$http', 'Data', functi
   $scope.$watch('pageNumber', function(newVal, oldVal) {
     if($scope.pageNumber){
       $scope.data = $scope.bigData.slice(($scope.pageNumber-1)*20,($scope.pageNumber-1)*20+20)   
+      $scope.pageNumberList = (getPageArray($scope.pageNumber))
     }
   });
   
+  
+  
+  $scope.sortData = function(column){
+    
+    
+    
+    $scope.bigData = $scope.bigData.sort(function(a, b){
+      if(a[column] < b[column]) return -1;
+      if(a[column] > b[column]) return 1;
+      return 0;
+    })
+    
+    if($scope.pageNumber == 1){
+      $scope.data = $scope.bigData.slice(($scope.pageNumber-1)*20,($scope.pageNumber-1)*20+20)   
+      $scope.pageNumberList = (getPageArray($scope.pageNumber))
+      $scope.$apply()
+    }
+    
+    $scope.pageNumber = 1
+    
+    
+  }
+  
+  function getPageArray(pageNumber){
+    pageNumber = parseInt(pageNumber)
+    var arr = []
+    
+    arr.push(1)
+    var i;
+    for(i=pageNumber-1; i<(pageNumber+2);i++){
+      if(i>1&&i<50){
+        arr.push(i)
+      }
+    }
+    arr.push(50)
+    return arr
+  }
  
   
   
@@ -41,6 +79,10 @@ app.controller('MainController', ['$scope', '$location', '$http', 'Data', functi
     if ($scope.pageNumber > 1) {
       $scope.pageNumber--
     }
+  }
+  
+  $scope.changePage = function(page){
+    $scope.pageNumber = page
   }
 
 
