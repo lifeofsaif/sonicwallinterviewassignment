@@ -5,26 +5,22 @@
   <meta name="author" content="Saif">
   <link rel="icon" href="./img/png/007-owl.png">
   <title>Abdur Rahman</title>
-  
+
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/angular-route/angular-route.min.js"></script>
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  
+
   <script src="node_modules/chart.js/dist/Chart.min.js"></script>
   <script src="node_modules/angular-chart.js/angular-chart.js"></script>
-  
+
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
   <script src="js/routes.js"></script>
   <script src="js/controllers/mainController.js"></script>
   <script src="js/factories/dataProcess.js"></script>
-  
 
-  
-  
-  
 </head>
 
 <body ng-app="MainApp" ng-controller="MainController" class="container">
@@ -36,7 +32,8 @@
         <li> <a class="nav-link" ng-click="changeTab('charts')" id="chartBtn" href="#!/analytics">Analytics</a> </li>
       </ul>
     </nav>
-    <h3 class="text-muted">Employees.json</h3> </header>
+    <h3 class="text-muted">Employees.json</h3>
+  </header>
   <div ng-view></div>
   <footer class="footer">
     <p>&copy; PleaseHireMe 2017</p>
@@ -46,5 +43,3 @@
 
 
 </html>
-
-

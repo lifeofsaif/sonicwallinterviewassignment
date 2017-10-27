@@ -1,43 +1,42 @@
-
-#tableTab tr{
+#tableTab tr {
   color: darkgray;
 }
 
-#tableTab tr:hover{ 
+#tableTab tr:hover {
   background-color: #2d2a28;
 }
 
-a.page-link{
+a.page-link {
   color: darkgray;
   border-color: darkgray;
   background: none;
 }
 
-a.page-link:hover{
+a.page-link:hover {
   background-color: #2d2a28;
   color: white;
-} 
+}
 
-/* analytics style */ 
 
-#chartTab{
+/* analytics style */
+
+#chartTab {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #a3a3a3;
 }
 
-#chartTab h5{
+#chartTab h5 {
   margin-top: 100px;
 }
 
-#chartTab h6{
+#chartTab h6 {
   margin-top: 40px;
 }
 
-#chartTab ul{
+#chartTab ul {
   list-style: none;
 }
-
 
 .foo {
   float: left;
@@ -46,6 +45,7 @@ a.page-link:hover{
   margin: 5px;
   border: 1px solid #a3a3a3;
 }
+
 
 /* Button colors */
 
@@ -72,20 +72,15 @@ a#tableBtn.nav-link {
 
 a.list-group-item {
   background-color: #1f2023;
-  
 }
 
 a.list-group-item:hover {
   background-color: #333333;
 }
 
-small.row.ng-binding{
- text-align: right
+small.row.ng-binding {
+  text-align: right
 }
-
-
-
-
 
 
 /* Button colors ends */
@@ -142,18 +137,13 @@ body {
 
 /* Customize container */
 
-
-
-
-
-@media (min-width: 1921px ).container {
-          width: 1920px;
-    }
-
-.container-narrow > hr {
-  margin: 2rem 0;
+@media (min-width: 1921px).container {
+  width: 1920px;
 }
 
+.container-narrow>hr {
+  margin: 2rem 0;
+}
 
 
 /* Main message*/
@@ -175,9 +165,10 @@ body {
   font-size: 1.5rem;
 }
 
-#tableTab{
+#tableTab {
   margin-top: 30px;
 }
+
 
 /* Responsive: Portrait tablets and up */
 
